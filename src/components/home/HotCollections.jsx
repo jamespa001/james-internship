@@ -9,6 +9,11 @@ import { HOT_COLLECTIONS_URL, fetchNetworkData } from '../../services/api';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { getSliderSettings } from '../../utils/sliderSettings';
+
+// Skeleton Related
+import { getSkeletonArray } from '../../utils/skeletonUtils';
+import HotCollectionsSkeleton from './HotCollectionsSkeleton';
 
 const HotCollections = () => {
   const [hotCollections, setHotCollections] = useState([]);
@@ -30,41 +35,10 @@ const HotCollections = () => {
   }, []);
 
   // Slider Settings
-  const sliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  const sliderSettings = getSliderSettings();
 
-  // User placeholder array for the skeleton loader while fetching real data.
-  const collectionsToDisplay = loading
-    ? Array.from({ length: 6 }, (_, index) => ({ id: `${index}` }))
-    : hotCollections;
+  // Placeholder array for the skeleton loader while fetching real data.
+  const collectionsToDisplay = loading ? getSkeletonArray(6) : hotCollections;
 
   return (
     <section id="section-collections" className="no-bottom">
@@ -84,18 +58,7 @@ const HotCollections = () => {
                   <div className="nft_slider_item">
                     {loading ? (
                       // Display skeleton while loading.
-                      <div className="nft_coll">
-                        <div className="nft_wrap nft_wrap--skeleton"></div>
-                        <div className="nft_coll_pp">
-                          <div className="nft_coll_pp--skeleton">
-                            <i className="fa fa-check"></i>
-                          </div>
-                        </div>
-                        <div className="nft_coll_info nft_coll_info--skeleton">
-                          <div className="nft_coll_info--title-skeleton"></div>
-                          <div className="nft_coll_info--code-skeleton"></div>
-                        </div>
-                      </div>
+                      <HotCollectionsSkeleton />
                     ) : (
                       // Display actual data
                       <div className="nft_coll">
