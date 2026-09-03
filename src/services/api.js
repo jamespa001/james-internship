@@ -6,6 +6,9 @@ export const HOT_COLLECTIONS_URL =
 export const NEW_ITEMS_URL =
   'https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems';
 
+export const TOP_SELLERS_URL =
+  'https://us-central1-nft-cloud-functions.cloudfunctions.net/topSellers';
+
 export async function fetchNetworkData(url) {
   try {
     const response = await axios.get(url);
