@@ -50,7 +50,7 @@ const NewItems = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          <div className="col-lg-12">
+          <div className="col-lg-12" data-aos="fade-up" data-aos-delay="250">
             <Slider {...sliderSettings}>
               {newItemsToDisplay.map((newItem) => (
                 <div key={newItem.id}>

@@ -1,19 +1,23 @@
-import React from "react";
-import Logo from "../images/Ultraverse.png";
-import { Link } from "react-router-dom";
-import { FaTimes } from "react-icons/fa";
+import React from 'react';
+import Logo from '../images/Ultraverse.png';
+import { Link } from 'react-router-dom';
+import { FaTimes } from 'react-icons/fa';
 
 const Nav = () => {
   const openNav = () => {
-    document.body.classList += "menu__open";
+    document.body.classList += 'menu__open';
   };
 
   const closeNav = () => {
-    document.body.classList.remove("menu__open");
+    document.body.classList.remove('menu__open');
   };
 
   return (
-    <header className="transparent header-light scroll-light smaller">
+    <header
+      className="transparent header-light scroll-light smaller"
+      data-aos="fade-down"
+      data-aos-duration="800"
+    >
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -53,7 +57,7 @@ const Nav = () => {
                       to="#"
                       className="btn-main connect-wallet"
                       onClick={() =>
-                        alert("This feature has not been implemented yet")
+                        alert('This feature has not been implemented yet')
                       }
                     >
                       Connect wallet

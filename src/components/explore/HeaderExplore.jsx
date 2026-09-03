@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const HeaderExplore = () => {
   return (
-    <div className="col-lg-12">
+    <div className="col-lg-12" data-aos="fade-up">
       <div className="items_filter">
         <form
           action="blank.php"
@@ -18,7 +18,7 @@ const HeaderExplore = () => {
               name="name_1"
               placeholder="search item here..."
               type="text"
-            />{" "}
+            />
             <a href="#" id="btn-submit">
               <i className="fa fa-search bg-color-secondary"></i>
             </a>

@@ -53,5 +53,16 @@ export default function CountdownTimer({
     return null;
   }
 
-  return <div className={className}>{isExpired ? 'EXPIRED' : timeLeft}</div>;
+  return (
+    <div className={className}>
+      {isExpired ? (
+        'EXPIRED'
+      ) : (
+        <>
+          {timeLeft}
+          <span className="live-dot"></span>
+        </>
+      )}
+    </div>
+  );
 }
