@@ -12,6 +12,9 @@ export const TOP_SELLERS_URL =
 export const EXPLORE_ITEMS_URL =
   'https://us-central1-nft-cloud-functions.cloudfunctions.net/explore';
 
+export const AUTHORS_URL =
+  'https://us-central1-nft-cloud-functions.cloudfunctions.net/authors';
+
 export async function fetchNetworkData(url) {
   try {
     const response = await axios.get(url);
