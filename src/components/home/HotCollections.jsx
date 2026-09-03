@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Network Fetch Related
-import axios from 'axios';
 import { HOT_COLLECTIONS_URL, fetchNetworkData } from '../../services/api';
 
 // Slider Related

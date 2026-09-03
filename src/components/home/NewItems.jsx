@@ -53,10 +53,7 @@ const NewItems = () => {
           <div className="col-lg-12">
             <Slider {...sliderSettings}>
               {newItemsToDisplay.map((newItem) => (
-                <div
-                  // className="col-lg-3 col-md-6 col-sm-6 col-xs-12"
-                  key={newItem.id}
-                >
+                <div key={newItem.id}>
                   <div className="nft_slider_item">
                     {loading ? (
                       // Display skeleton while loading.
@@ -93,7 +90,7 @@ const NewItems = () => {
                                 <a href="" target="_blank" rel="noreferrer">
                                   <i className="fa fa-twitter fa-lg"></i>
                                 </a>
-                                <a href="">
+                                <a href="#">
                                   <i className="fa fa-envelope fa-lg"></i>
                                 </a>
                               </div>
