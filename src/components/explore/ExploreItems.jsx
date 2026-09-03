@@ -65,7 +65,7 @@ const ExploreItems = () => {
 
   return (
     <>
-      <div>
+      <div data-aos="fade-up">
         <select id="filter-items" defaultValue="" onChange={handleFilterChange}>
           <option value="">Default</option>
           <option value="price_low_to_high">Price, Low to High</option>
@@ -79,6 +79,8 @@ const ExploreItems = () => {
           key={exploreItem.id || index}
           className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
           style={{ display: 'block', backgroundSize: 'cover' }}
+          data-aos="fade-up"
+          data-aos-delay={(index % 4) * 100}
         >
           {loading ? (
             <ExploreItemsSkeleton />
@@ -137,7 +139,7 @@ const ExploreItems = () => {
         </div>
       ))}
       {visibleItemsCount < exploreItems.length && !loading && (
-        <div className="col-md-12 text-center">
+        <div className="col-md-12 text-center" data-aos="fade-up">
           <Link
             to=""
             id="loadmore"

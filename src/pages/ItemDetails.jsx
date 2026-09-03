@@ -41,7 +41,7 @@ const ItemDetails = () => {
             {loading ? (
               <ItemDetailsSkeleton />
             ) : (
-              <div className="row">
+              <div className="row fade-in-content">
                 <div className="col-md-6 text-center">
                   <img
                     src={item?.nftImage ?? nftImage}
