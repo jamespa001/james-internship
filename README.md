@@ -20,6 +20,6 @@ An interactive Web3 NFT marketplace interface engineered for browsing, filtering
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/jamespa001/james-internship.git](https://github.com/jamespa001/)james-internship.git
+   git clone [https://github.com/jamespa001/james-internship.git](https://github.com/jamespa001/james-internship.git)
    cd james-internship
    ```
