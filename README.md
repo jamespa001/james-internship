@@ -19,7 +19,11 @@ An interactive Web3 NFT marketplace interface engineered for browsing, filtering
 ## Getting Started Locally
 
 1. Clone the repository:
-   ```bash
-   git clone [https://github.com/jamespa001/james-internship.git](https://github.com/jamespa001/james-internship.git)
+   git clone https://github.com/jamespa001/james-internship.git
    cd james-internship
-   ```
+
+2. Install dependencies:
+   npm install --legacy-peer-deps
+
+3. Run the development server:
+   npm run dev
